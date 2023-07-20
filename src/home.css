@@ -1,0 +1,163 @@
+.home-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    margin: 0px auto;
+    background: rgb(237, 238, 218);
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+}
+
+.home-hero{
+    min-height: 450px;
+    width: 100%;
+    padding: 20px 20px;
+    background-color: rgb(148, 170, 163);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-hero img{
+    height: 300px;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+
+.home-title{
+    width: 40%;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-title h2{
+    font-size: 2.0rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.home-title-text{
+    font-size: 1.1rem;
+    color: rgb(53, 49, 49);
+    width: 50%
+}
+
+.home-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-button{
+    width: 50%;
+    margin-top: 40px;
+    padding: 5px 10px;
+    font-size: 1.0rem;
+    color: white;
+    background-color: rgb(39, 37, 37);
+    cursor: pointer;
+}
+
+.home-button a{
+    color: white;
+    text-decoration: none;
+}
+
+.home-button:hover{
+    background-color: black;
+    transition: 0.4s
+}
+
+.home-top-item{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.home-popular, .home-latest{
+    width: 50%;
+    height: 100%;
+}
+
+.home-popular{
+    background: rgb(240, 207, 207);
+}
+
+.home-latest{
+    background-color: blanchedalmond;
+}
+
+.home-popular-container, .home-latest-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.home-popular h2, .home-latest h2{
+    margin: 40px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.home-storeitem-container{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+.home-storeitem-container:hover{
+    scale: 1.2;
+    transition: 0.5s
+}
+  
+.home-storeitem-container img{
+    width: 150px;
+}
+  
+.home-storeitem-name{
+    text-align: center;
+    padding: 5px 0px;
+    font-size: 0.8rem;
+    border-bottom: 1px solid grey;
+    background: white;
+}
+  
+.home-storeitem-price{
+    padding: 5px 0px;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: bold;
+    color: green;
+    background: white;
+}
+
+@media (max-width: 1200px){
+    .home-hero img{
+        height: 200px;
+    }
+    .home-title{
+        width: 70%;
+    }
+    .home-button{
+        display: flex;
+        justify-content: center;
+        margin: 30px auto;
+    }
+    .home-top-item{
+        flex-direction: column;
+    }
+    .home-popular, .home-latest{
+        width: 100%;
+        height: 100%;
+    }
+  }
+  

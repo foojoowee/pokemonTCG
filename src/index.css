@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background: url("/imgs/pokemon-bg4.png")
+}
+
+.nav-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 100px;
+  font-size: clamp(1.2rem, 3.5vw, 2rem);
+  border-bottom: 3px solid rgb(172, 168, 168);
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.nav-links{
+  display: flex;
+}
+
+.nav-links div{
+  margin: 0px 20px;
+
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: rgb(105, 97, 97);
+}
+
+.nav-links a.active-nav-link{
+  color: rgb(0, 0, 0);
+}
+
+.cart-button{
+  height: clamp(1.2rem, 5vw, 3rem);
+  width: clamp(1.2rem, 5vw, 3rem);
+  border-radius: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-button svg{
+  height: 60%;
+  width: 60%;
+  margin-top: 10%;
+}
+
+.store-container{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  min-height: 100vh;
+  align-items: center;
+  margin: 0px auto;
+  padding: 0px 25px;
+  background: rgb(237, 238, 218);
+}
+
+.store-container-title{
+  margin: 50px 0;
+  padding: 10px 30px;
+  border: 1px solid black;
+  border-radius: 20px;
+  font-size: 2.0rem;
+  text-transform: uppercase;
+  color: rgb(33, 37, 24);
+  background-color: antiquewhite;
+}
+
+.store-container-content{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.store-container-empty{
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.storeitem-container{
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin-bottom: 56px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.store-container img{
+  width: 240px;
+  border-radius: 10px;
+}
+
+.storeitem-container img:hover{
+  scale: 1.4;
+  transition: 0.4s;
+}
+
+.storeitem-name{
+  text-align: center;
+  padding: 5px 0px;
+  font-size: 1.3rem;
+  border-bottom: 1px solid grey;
+}
+
+.storeitem-price-container{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 10px auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.storeitem-price{
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  margin: 5px 20px;
+  text-align: center;
+}
+
+.addtocart-button{
+  padding: 5px 10px;
+  background-color: rgb(206, 218, 214);
+  font-size: 0.95rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.addtocart-button:hover{
+  background-color: rgb(138, 207, 184);
+  transition: 0.4s;
+}
+
+.storeitem-pic{
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
+}
+
+.storeitem-addcart-container{
+  display: flex;
+}
+
+.storeitem-quantity{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.storeitem-quantity button{
+  padding: 1px 5px;
+  margin: 0px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.storeitem-quantity i{
+  cursor: pointer;
+  scale: 1.33
+}
+
+.storeitem-quantity div{
+  font-size: 1.0rem
+}
+
+
+.storeitem-quantity button:nth-child(1){
+  background-color: rgb(247, 179, 162);
+}
+
+.storeitem-quantity button:nth-child(3){
+  background-color: rgb(170, 230, 113);
+}
+
+.cart-quantity-circle{
+  background-color: rgb(247, 91, 91);
+  color: white;
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  transform: translate(25%, 25%);
+}
+
+.shoppingcart-container{
+  position: fixed;
+  width: 30%;
+  height: 100%;
+  background: rgb(218, 216, 216);
+  right: 0%;
+  z-index: 5;
+  opacity: 0;
+  overflow: auto;
+}
+
+.slide-in{
+  animation: slide-in-X 1s ease forwards;
+}
+
+.slide-out{
+  display: none;
+}
+
+.shoppingcart-header{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px auto;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
+.shoppingcart-close img{
+  height: 30px;
+  border: 1px solid black;
+  background: white;
+  cursor: pointer;
+}
+
+.shoppingcart-items{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0px 30px;
+
+}
+
+.cartitem-container{
+  display: flex;
+  margin: 10px;
+  flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+}
+
+.cartitem-container img {
+    height: 100px;
+    object-fit: cover;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    align-items: flex-start;
+
+}
+
+.cartitem-subcontainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+
+}
+
+.cartitem-name{
+  font-size: 1.2rem;
+}
+
+.cartitem-price{
+  color: rgb(65, 107, 75);
+  font-size: 1.2rem;
+}
+
+.cartitem-subcontainer2{
+  display: flex;
+  flex-direction: row;
+}
+
+.cartitem-remove{
+  display: flex; 
+  justify-content: flex-end;
+  align-items: center;
+  scale: 1.5;
+  margin-left: auto;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.shoppingcart-grand-total{
+  text-align: start;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-left: 30px;
+  border-top: 2px solid black;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.shoppingcart-checkout{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.shoppingcart-checkout button{
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: beige;
+  cursor: pointer;
+}
+
+.shoppingcart-checkout button:hover{
+  background-color: rgb(248, 248, 141);
+}
+
+.store-search{
+  margin-bottom: 50px;
+}
+
+.store-search form{
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.store-search form input{
+  flex: 1;
+  padding: 6px;
+  font-size: 1rem;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.store-search form button{
+  padding: 6px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  background-color: #d3a64c;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.store-search form button:hover{
+  background-color: #ce8b00;
+}
+
+.store-search-set select{
+  margin: 0px 10px;
+}
+
+@keyframes slide-in-X{
+  from{
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  to{
+      transform: translateX(0%);
+      opacity: 1.0;
+  }
+}
+
+@keyframes slide-out-X{
+  from{
+      transform: translateX(0%);
+      opacity: 1.0;
+  }
+  to{
+      transform: translateX(100%);
+      opacity: 0;
+  }
+}
+
+@media (max-width: 1200px){
+  .store-container-content{
+    justify-content: center;
+  }
+}
+
+
