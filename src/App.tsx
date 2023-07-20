@@ -17,7 +17,7 @@ function App() {
   return (
     <div>
       <ShoppingCartProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/pokemonTCG/">
       <ShoppingCart/>
       <Navbar/>
         <Routes>
