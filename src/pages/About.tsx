@@ -3,7 +3,6 @@ import picture from "/imgs/pokemon-cards.png"
 export default function About(){
     return(
         <div className="about-container">
-
             <div className="about-title">
                 <h1>ABOUT</h1>
             </div>

@@ -24,6 +24,7 @@ body{
 
 .nav-links{
   display: flex;
+  align-items: center;
 }
 
 .nav-links div{
@@ -41,8 +42,8 @@ body{
 }
 
 .cart-button{
-  height: clamp(1.2rem, 5vw, 3rem);
-  width: clamp(1.2rem, 5vw, 3rem);
+  height: clamp(2.0rem, 5vw, 3rem);
+  width: clamp(2.0rem, 5vw, 3rem);
   border-radius: 100%;
   position: relative;
   cursor: pointer;
@@ -58,6 +59,7 @@ body{
   display: flex;
   flex-direction: column;
   width: 80%;
+  min-width: 300px;
   min-height: 100vh;
   align-items: center;
   margin: 0px auto;
@@ -72,7 +74,7 @@ body{
   padding: 10px 30px;
   border: 1px solid black;
   border-radius: 20px;
-  font-size: 2.0rem;
+  font-size: clamp(1.5rem, 3vw, 2.0rem);
   text-transform: uppercase;
   color: rgb(33, 37, 24);
   background-color: antiquewhite;
@@ -85,7 +87,7 @@ body{
 }
 
 .store-container-empty{
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   text-align: center;
   margin-bottom: 50px;
 }
@@ -113,7 +115,7 @@ body{
 .storeitem-name{
   text-align: center;
   padding: 5px 0px;
-  font-size: 1.3rem;
+  font-size: clamp(1.0rem, 2.5vw, 1.3rem);
   border-bottom: 1px solid grey;
 }
 
@@ -131,6 +133,10 @@ body{
   font-weight: 600;
   margin: 5px 20px;
   text-align: center;
+}
+
+.storeitem-price, .storeitem-rarity{
+  font-size: clamp(0.8rem, 2vw, 1rem)
 }
 
 .addtocart-button{
@@ -192,8 +198,8 @@ body{
 .cart-quantity-circle{
   background-color: rgb(247, 91, 91);
   color: white;
-  height: 25px;
-  width: 25px;
+  height: clamp(13px, 2vw, 25px);
+  width: clamp(13px, 2vw, 25px);
   border-radius: 100%;
   display: flex;
   justify-content: center;
@@ -206,7 +212,8 @@ body{
 
 .shoppingcart-container{
   position: fixed;
-  width: 30%;
+  width: 25%;
+  min-width: 300px;
   height: 100%;
   background: rgb(218, 216, 216);
   right: 0%;
@@ -354,8 +361,15 @@ body{
   background-color: #ce8b00;
 }
 
+.store-search-set{
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
+}
+
 .store-search-set select{
   margin: 0px 10px;
+  text-align: center;
 }
 
 @keyframes slide-in-X{
@@ -383,6 +397,21 @@ body{
 @media (max-width: 1200px){
   .store-container-content{
     justify-content: center;
+  }
+  .store-container img{
+    width: 200px;
+  }
+}
+
+@media (max-width: 600px){
+  .nav-container{
+    padding: 10px 20px;
+  }
+  .cart-quantity-circle{
+    font-size: 0.6rem;
+  }
+  .store-container img{
+    width: 150px;
   }
 }
 

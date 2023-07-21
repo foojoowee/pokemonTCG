@@ -51,7 +51,7 @@ export default function Store(){
                     <button type="submit">Search</button>
                 </form>
                 <div className="store-search-set">
-                    <label>Select a Card Set:</label>
+                    <label>Card Set:</label>
                     <select 
                     id="set-select" 
                     onChange={(e) => setCardSet(e.target.value)}>

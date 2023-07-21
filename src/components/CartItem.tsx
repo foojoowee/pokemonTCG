@@ -1,3 +1,5 @@
+// superceded Code
+
 import { useShoppingCart } from "../context/ShoppingCartContext";
 
 type CartItemProps = {

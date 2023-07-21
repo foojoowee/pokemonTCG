@@ -30,7 +30,7 @@ export default function Home(){
                         <div className="home-title-text">
                             Get your original pokemon cards here at this One-Stop shop! 100% original cards or money back guaranteed! Enjoy free shippping for this month until the 10th of August!
                         </div>
-                        <a href="/store">
+                        <a href="/pokemonTCG/store">
                             <button className="home-button">BUY NOW</button>
                         </a>
                     </div>
@@ -42,7 +42,7 @@ export default function Home(){
                             Enjoy free shipping with all your orders for a limited time only! Valid for purchases above $1000.
                         </div>
                         <br></br>
-                        <div>
+                        <div className="home-title-text">
                             Terms and conditions apply.
                         </div>
                         <a href="/store">
@@ -72,21 +72,21 @@ export default function Home(){
                     <h2>POPULAR ITEMS</h2>
                     <div className="home-popular-container">
                         <div className="home-storeitem-container">
-                            <a href="/store">
+                            <a href="/pokemonTCG/store">
                                 <div className="home-storeitem-pic"><img src="https://images.pokemontcg.io/base1/4.png"></img></div>
                             </a>
-                            <div className="home-storeitem-name">Charizard - Base Set</div>
+                            <div className="home-storeitem-name">Charizard - Base</div>
                             <div className="home-storeitem-price">$499.99</div>
                         </div>
                         <div className="home-storeitem-container">
-                            <a href="/store">
+                            <a href="/pokemonTCG/store">
                                 <div className="home-storeitem-pic"><img src="https://images.pokemontcg.io/ex15/97.png"></img></div>
                             </a>
                             <div className="home-storeitem-name">Rayquaza ex δ</div>
                             <div className="home-storeitem-price">$49.99</div>
                         </div>
                         <div className="home-storeitem-container">
-                            <a href="/store">
+                            <a href="/pokemonTCG/store">
                                 <div className="home-storeitem-pic"><img src="https://images.pokemontcg.io/xy4/121.png"></img></div>
                             </a>
                             <div className="home-storeitem-name">MGengar-EX</div>
@@ -98,21 +98,21 @@ export default function Home(){
                     <h2>RECENTLY PURCHASED</h2>
                     <div className="home-latest-container">
                         <div className="home-storeitem-container">
-                            <a href="/store">
+                            <a href="/pokemonTCG/store">
                                 <div className="home-storeitem-pic"><img src="https://images.pokemontcg.io/xy4/122.png"></img></div>
                             </a>
                             <div className="home-storeitem-name">Dialga-EX (HA)</div>
                             <div className="home-storeitem-price">$29.99</div>
                         </div>
                         <div className="home-storeitem-container">
-                            <a href="/store">
+                            <a href="/pokemonTCG/store">
                                 <div className="home-storeitem-pic"><img src="https://images.pokemontcg.io/bw7/137.png"></img></div>
                             </a>
                             <div className="home-storeitem-name">Computer Search</div>
                             <div className="home-storeitem-price">$49.99</div>
                         </div>
                         <div className="home-storeitem-container">
-                            <a href="/store">
+                            <a href="/pokemonTCG/store">
                                 <div className="home-storeitem-pic"><img src="https://images.pokemontcg.io/bw7/143.png"></img></div>
                             </a>
                             <div className="home-storeitem-name">Cresselia-EX</div>
