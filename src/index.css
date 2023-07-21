@@ -372,6 +372,10 @@ body{
   text-align: center;
 }
 
+.preload-gif{
+  
+}
+
 @keyframes slide-in-X{
   from{
       transform: translateX(100%);

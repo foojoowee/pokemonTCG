@@ -1,13 +1,16 @@
 import StoreItem from "../components/StoreItem"
 import { fetchData } from "../module/api"
 import {useState, useEffect} from "react"
+import gif from "/imgs/loading-gif.gif"
 
 export default function Store(){
     const [calledData, setCalledData] = useState([])
     const [searchItem, setSearchItem] = useState("")
     const [cardSet, setCardSet] = useState("base1")
+    const [loading, setLoading] = useState(false)
 
     async function selectData(){
+        setLoading(true)
         try{
             const data: any = await fetchData(searchItem as any, cardSet);
             console.log(data)
@@ -20,7 +23,9 @@ export default function Store(){
         }catch (error) {
             console.error("Error fetching and rendering data:", error);
             return [];
-    }}
+        }
+        setLoading(false);
+    }
 
     useEffect(()=>{
         selectData();
@@ -63,28 +68,37 @@ export default function Store(){
                     </select>
                 </div>
             </div>
-            {calledData.length > 0 && (
+            {loading && (
+                <div className="preload-gif">
+                    <img src={gif} alt="" />
+                </div>
+            )}
+            {!loading && (
+                <>
                 <div className="store-container-empty">
                     <p>Search Results: {calledData.length} items</p>
                 </div>
-            )}
-            <div className="store-container-content">
-                {calledData.map((item: any) =>
-                    <StoreItem 
-                        key={item.id}
-                        id={item.id}
-                        name={item.name}
-                        price={item.tcgplayer.prices}
-                        rarity={item.rarity}
-                        imgUrl={item.images.small}
-                    />
-                )}
-            </div>
-            {calledData.length === 0 && (
+                <div className="store-container-content">
+                    {calledData.map((item: any) =>
+                        <StoreItem 
+                            key={item.id}
+                            id={item.id}
+                            name={item.name}
+                            price={item.tcgplayer.prices}
+                            rarity={item.rarity}
+                            imgUrl={item.images.small}
+                        />
+                    )}
+                </div>
+                </>
+            )
+            }
+
+            {calledData.length === 0 && !loading && (
                 <div className="store-container-empty">
                     <p>No Cards Found.</p>
                     <br></br>
-                    <p>Please try another search or wait awhile for page to load</p>
+                    <p>Please try another search.</p>
                 </div>
             )}
         </div>
