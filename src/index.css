@@ -63,6 +63,8 @@ body{
   margin: 0px auto;
   padding: 0px 25px;
   background: rgb(237, 238, 218);
+  border-right: 3px solid black;
+  border-left: 3px solid black;
 }
 
 .store-container-title{

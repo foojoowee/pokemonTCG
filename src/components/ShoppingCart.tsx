@@ -1,16 +1,16 @@
 import closeIcon from "../assets/close-icon.png"
 import { useShoppingCart } from "../context/ShoppingCartContext"
-import CartItem from "./CartItem"
+import NewCartItem from "./NewCartItem"
 
 export default function ShoppingCart(){
-    const {toggleCart, cartOpen, checkoutTotal, updatedCartItems} = useShoppingCart()
+    const {toggleCart, cartOpen, checkoutTotal, newCartItem} = useShoppingCart()
     function printCart(){
-        console.log(updatedCartItems)
+        console.log(newCartItem)
     }
     return(
         <>
             {
-                <div className={`shoppingcart-container ${cartOpen ? "slide-in" : "slide-out"}`}>
+            <div className={`shoppingcart-container ${cartOpen ? "slide-in" : "slide-out"}`}>
                 <div className="shoppingcart-header">
                     <div className="shoppingcart-title">YOUR CART</div>
                     <div className="shoppingcart-close" onClick={toggleCart}>
@@ -18,10 +18,13 @@ export default function ShoppingCart(){
                     </div>
                 </div>
                 <div className="shoppingcart-items">
-                    {updatedCartItems.map(item => 
+                    {newCartItem.map(item => 
                         <div>
-                            <CartItem
+                            <NewCartItem
                                 id = {item.id}
+                                name = {item.name}
+                                imgUrl = {item.imgUrl}
+                                price = {item.price}
                                 quantity = {item.quantity}
                             />
                         </div>
