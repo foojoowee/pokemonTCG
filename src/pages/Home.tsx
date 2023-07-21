@@ -2,6 +2,7 @@ import home1 from "/imgs/home-1.jpg"
 import home2 from "/imgs/home-2.jpg"
 import home3 from "/imgs/home-3.jpg"
 import {useState, useEffect} from 'react'
+import {Link} from "react-router-dom"
 
 const images = [home1, home2, home3]
 
@@ -30,9 +31,9 @@ export default function Home(){
                         <div className="home-title-text">
                             Get your original pokemon cards here at this One-Stop shop! 100% original cards or money back guaranteed! Enjoy free shippping for this month until the 10th of August!
                         </div>
-                        <a href="/pokemonTCG/store">
+                        <Link to="/store">
                             <button className="home-button">BUY NOW</button>
-                        </a>
+                        </Link>
                     </div>
                     }
                     {displayPage === 1 &&
@@ -45,9 +46,9 @@ export default function Home(){
                         <div className="home-title-text">
                             Terms and conditions apply.
                         </div>
-                        <a href="/store">
+                        <Link to="/store">
                             <button className="home-button">BUY NOW</button>
-                        </a>
+                        </Link>
                     </div>
                     }
                     {displayPage === 2 &&
@@ -56,9 +57,9 @@ export default function Home(){
                         <div className="home-title-text">
                             Get ready for the launch of the latest expansion - Scarlet & Violet! With brand new powerful EX cards and Paradox Pokemon, expand your collection today with us.
                         </div>
-                        <a href="/store">
+                        <Link to="/store">
                             <button className="home-button">BUY NOW</button>
-                        </a>
+                        </Link>
                     </div>
                     }
 
